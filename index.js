@@ -104,7 +104,7 @@ app.get('/view', (req, res) => {
   <div id="result"></div>
   <script>
     async function fetchData() {
-      const key = document.getElementById('key').value;
+      const key = document.getElementById('key').value.trim();
       const result = document.getElementById('result');
       try {
         const res = await fetch('/data', { headers: { 'x-view-key': key } });
